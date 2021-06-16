@@ -10,13 +10,13 @@ class Formatter {
     const noCap = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from'];
     let title = '';
 
-    let titleWords = string.split(' ').map((word, index) => {
+    let titles = string.split(' ').map((word, index) => {
       if(noCap.includes(word) && index != 0)
         return word;
       return this.capitalize(word);
     })
 
-    return titleWords.join(' ');
+    return titles.join(' ');
   }
 }
 
